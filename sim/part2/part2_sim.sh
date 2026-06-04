@@ -1,0 +1,1 @@
+vcs -R +v2k -full64 -f ./part2/part2_sim.f -debug_access+all -l ./part2/part2_sim.log -sverilog
