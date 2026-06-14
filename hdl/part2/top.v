@@ -29,7 +29,7 @@ module top #(parameter K = 3) (
     localparam IDLE = 2'b00; // Waiting for start pulse and initializing registers
     localparam PROC = 2'b01; // Processing and sorting data on-the-fly
     localparam DONE = 2'b10; // Outputting result and raising finish pulse
-
+    
     reg [1:0] state;
     reg [1:0] next_state;
     reg [7:0] input_count;   // Counter for processed valid data items
@@ -117,7 +117,7 @@ module top #(parameter K = 3) (
                         end
                     end
                 end
-
+                
                 PROC: begin
                     if (valid) begin
                         input_count <= input_count + 8'd1;

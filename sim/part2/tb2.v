@@ -104,7 +104,9 @@ module tb2;
   // waveform
   initial begin
       $fsdbDumpfile("./part2/part2_sim.fsdb");
-      $fsdbDumpvars; 
+      // 0 represents recording all depths, tb represents your top-level Testbench module name
+      // "+mda" is the most crucial parameter, representing the simultaneous recording of a Multi-Dimensional Array (MDA).
+      $fsdbDumpvars(0, tb2, "+mda");
   end
 
   // load patterns
